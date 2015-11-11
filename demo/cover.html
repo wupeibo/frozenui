@@ -176,7 +176,7 @@
                 function covershow(cover){
                     if(!cover._isShown){
                         var title=cover.currentTrigger.find('.title'),
-                                index=$(".item").index(cover.currentTrigger);
+                                index=$(".item").index(cover.currentTrigger[0]);
 
                         title.css({
                             '-webkit-transform':'translateY('+(cover.position.screenHeight/2-title.offset().top-30)+'px)'
@@ -189,7 +189,7 @@
                 }
                 function coverhide(cover){
                     var title=cover.currentTrigger.find('.title'),
-                            index=$(".item").index(cover.currentTrigger);
+                            index=$(".item").index(cover.currentTrigger[0]);
 
                     title.css({
                         '-webkit-transform':'translateY(0px)'
